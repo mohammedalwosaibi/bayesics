@@ -116,8 +116,8 @@ export function MonteCarloBayes({
                 borderRadius: 6,
                 fontSize: 11,
               }}
-              formatter={(v: number) => fmtPct(v, 2)}
-              labelFormatter={(v: number) => `n = ${v.toLocaleString()}`}
+              formatter={(v) => fmtPct(Number(v), 2)}
+              labelFormatter={(v) => `n = ${Number(v).toLocaleString()}`}
             />
             <ReferenceLine
               y={theoretical}

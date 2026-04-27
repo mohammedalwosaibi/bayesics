@@ -122,7 +122,7 @@ export function DiceHistogram({ className }: { className?: string }) {
               />
               <Tooltip
                 cursor={{ fill: "rgba(79,70,229,0.06)" }}
-                formatter={(value: number) => [value.toLocaleString(), "count"]}
+                formatter={(value) => [Number(value).toLocaleString(), "count"]}
                 labelFormatter={(label) => `sum ${label}`}
                 contentStyle={{
                   background: "rgba(255,255,255,0.96)",

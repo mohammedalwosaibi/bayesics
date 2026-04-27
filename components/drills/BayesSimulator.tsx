@@ -82,8 +82,8 @@ export function BayesSimulator({
               width={32}
             />
             <Tooltip
-              formatter={(v: number) => fmtPct(v, 1)}
-              labelFormatter={(v: number) => `prior ${fmtPct(v, 1)}`}
+              formatter={(v) => fmtPct(Number(v), 1)}
+              labelFormatter={(v) => `prior ${fmtPct(Number(v), 1)}`}
               contentStyle={{
                 background: "var(--surface, #fff)",
                 border: "1px solid var(--sim-rule, rgba(0,0,0,0.1))",
@@ -106,7 +106,6 @@ export function BayesSimulator({
               fill={dotColor}
               stroke="var(--surface, #fff)"
               strokeWidth={2}
-              isFront
             />
           </LineChart>
         </ResponsiveContainer>
