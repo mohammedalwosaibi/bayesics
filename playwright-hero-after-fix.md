@@ -1,0 +1,95 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "QuantBayesics — home" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - img "QuantBayesics" [ref=e6]
+          - generic [ref=e18]: QuantBayesics
+        - generic [ref=e19]:
+          - navigation [ref=e20]
+          - link "Get Started" [ref=e24] [cursor=pointer]:
+            - /url: /bayes
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - heading "All you need to ace your interviews. Learn, don't memorize." [level=1] [ref=e30]:
+          - text: All you need to
+          - generic [ref=e31]: ace
+          - text: your interviews.
+          - text: Learn, don't memorize.
+        - paragraph [ref=e33]: QuantBayesics is a probability course for people shipping models in production. Every lesson pairs a live simulator with a drill — no passive videos, no hand-waving through the math.
+        - generic [ref=e34]:
+          - link "Try the Bayes lesson" [ref=e35] [cursor=pointer]:
+            - /url: /bayes
+          - link "Browse the curriculum" [ref=e38] [cursor=pointer]:
+            - /url: "#curriculum"
+        - paragraph [ref=e39]: Free lessons · no card required · premium drills unlock with Pro.
+      - generic [ref=e42]:
+        - generic [ref=e44]: Law of large numbers
+        - generic [ref=e45]:
+          - generic [ref=e46]
+          - generic [ref=e69]
+          - generic [ref=e114]
+    - generic [ref=e135]:
+      - generic [ref=e136]:
+        - generic [ref=e137]: What you get
+        - heading "The probability course for the work you actually do." [level=2] [ref=e138]
+      - generic [ref=e139]:
+        - generic [ref=e140]:
+          - generic [ref=e141]: "01"
+          - heading "Prior, likelihood, posterior — in your hands." [level=3] [ref=e142]
+          - paragraph [ref=e143]: Every probability idea arrives as a simulator you can break. You feel the math before you formalize it.
+        - generic [ref=e144]:
+          - generic [ref=e145]: "02"
+          - heading "Drills that match your day job." [level=3] [ref=e146]
+          - paragraph [ref=e147]: Rewrite a classifier threshold. Reason about calibration. Compute a posterior update under label noise.
+        - generic [ref=e148]:
+          - generic [ref=e149]: "03"
+          - heading "Rigor you can reference later." [level=3] [ref=e150]
+          - paragraph [ref=e151]: No hand-waving. Formal definitions, worked proofs, and a cheatsheet you can paste into docs.
+    - generic [ref=e153]:
+      - generic [ref=e154]:
+        - generic [ref=e155]:
+          - generic [ref=e156]: Curriculum · preview
+          - heading "Forty lessons. One coherent arc." [level=2] [ref=e157]
+        - link "Jump to Bayes’ rule →" [ref=e158] [cursor=pointer]:
+          - /url: /bayes
+      - generic [ref=e159]:
+        - generic [ref=e160]:
+          - generic [ref=e161]
+          - list [ref=e164]
+        - generic [ref=e177]:
+          - generic [ref=e178]
+          - list [ref=e181]
+        - generic [ref=e194]:
+          - generic [ref=e195]
+          - list [ref=e198]
+    - generic [ref=e212]:
+      - generic [ref=e213]: From the early cohort
+      - blockquote [ref=e214]: “The medical-test simulator on the Bayes page did more for my intuition than three years of coursework. I sent it to my whole team.”
+      - generic [ref=e215]: ML Engineer · early-access reviewer
+    - generic [ref=e219]:
+      - generic [ref=e220]:
+        - heading "Start with Bayes. Stay for the rest." [level=2] [ref=e221]
+        - generic [ref=e222]:
+          - generic [ref=e223]
+          - generic [ref=e226]
+          - generic [ref=e229]
+      - link "Try the Bayes lesson" [ref=e232] [cursor=pointer]:
+        - /url: /bayes
+        - text: Try the Bayes lesson
+        - img [ref=e233]
+    - contentinfo [ref=e235]:
+      - generic [ref=e236]:
+        - generic [ref=e237]:
+          - img "QuantBayesics" [ref=e238]
+          - generic [ref=e250]: QuantBayesics
+          - generic [ref=e251]: · © 2026
+        - link "Open examples" [ref=e253] [cursor=pointer]:
+          - /url: "#"
+          - img [ref=e254]
+          - text: Open examples
+  - button "Open Next.js Dev Tools" [ref=e296] [cursor=pointer]:
+    - img [ref=e297]
+  - alert [ref=e258]
+  - generic [ref=e259]: "0"

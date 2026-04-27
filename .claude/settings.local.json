@@ -1,0 +1,31 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install *)",
+      "Bash(npm run *)",
+      "Bash(curl -s -o /tmp/hub.html -w \"HUB: %{http_code}\\\\n\" http://localhost:3001/)",
+      "Bash(curl -s -o /tmp/post.html -w \"POSTERIOR HOME: %{http_code}\\\\n\" http://localhost:3001/posterior)",
+      "Bash(curl -s -o /tmp/post-bayes.html -w \"POSTERIOR BAYES: %{http_code}\\\\n\" http://localhost:3001/posterior/bayes)",
+      "Bash(curl -s -o /tmp/axiom.html -w \"AXIOM HOME: %{http_code}\\\\n\" http://localhost:3001/axiom)",
+      "Bash(curl -s -o /tmp/axiom-bayes.html -w \"AXIOM BAYES: %{http_code}\\\\n\" http://localhost:3001/axiom/bayes)",
+      "Read(//tmp/**)",
+      "Bash(curl -s -o /tmp/prior.html -w \"PRIOR HOME: %{http_code}\\\\n\" http://localhost:3001/prior)",
+      "Bash(curl -s -o /tmp/prior-bayes.html -w \"PRIOR BAYES: %{http_code}\\\\n\" http://localhost:3001/prior/bayes)",
+      "Bash(curl -s -o /tmp/ck.html -w \"CK HOME: %{http_code}\\\\n\" http://localhost:3001/coin-and-key)",
+      "Bash(curl -s -o /tmp/ck-bayes.html -w \"CK BAYES: %{http_code}\\\\n\" http://localhost:3001/coin-and-key/bayes)",
+      "Bash(curl -s -o /tmp/graph.html -w \"GRAPH HOME: %{http_code}\\\\n\" http://localhost:3001/graph)",
+      "Bash(curl -s -o /tmp/graph-bayes.html -w \"GRAPH BAYES: %{http_code}\\\\n\" http://localhost:3001/graph/bayes)",
+      "Bash(curl -s -o /tmp/graph-practice.html -w \"GRAPH PRACTICE: %{http_code}\\\\n\" http://localhost:3001/graph/bayes/practice)",
+      "Bash(curl -s \"http://localhost:3001/graph/bayes/practice\")",
+      "Bash(curl -s http://localhost:3001__TRACKED_VAR__)",
+      "Bash(kill %1)",
+      "Bash(pkill -f \"next dev\")",
+      "Bash(lsof -ti:3000,3001)",
+      "Bash(xargs -r kill -9)",
+      "Bash(npx tsc *)",
+      "Bash(curl -s -o /tmp/home.html -w \"HTTP %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /tmp/bayes.html -w \"HTTP %{http_code}\\\\n\" http://localhost:3000/bayes)",
+      "Bash(curl *)"
+    ]
+  }
+}

@@ -1,0 +1,90 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - link "QuantBayesics — home" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - img "QuantBayesics" [ref=e6]
+        - generic [ref=e18]: QuantBayesics
+      - generic [ref=e19]:
+        - navigation [ref=e20]
+        - link "Get Started" [ref=e24] [cursor=pointer]:
+          - /url: /bayes
+  - generic [ref=e28]:
+    - generic [ref=e29]:
+      - heading "All you need to ace your interviews. Learn, don't memorize." [level=1] [ref=e30]:
+        - text: All you need to
+        - generic [ref=e31]: ace
+        - text: your interviews.
+        - text: Learn, don't memorize.
+      - paragraph [ref=e33]: QuantBayesics is a probability course for people shipping models in production. Every lesson pairs a live simulator with a drill — no passive videos, no hand-waving through the math.
+      - generic [ref=e34]:
+        - link "Try the Bayes lesson" [ref=e35] [cursor=pointer]:
+          - /url: /bayes
+        - link "Browse the curriculum" [ref=e38] [cursor=pointer]:
+          - /url: "#curriculum"
+      - paragraph [ref=e39]: Free lessons · no card required · premium drills unlock with Pro.
+    - generic [ref=e42]:
+      - generic [ref=e44]: Law of large numbers
+      - generic [ref=e45]:
+        - generic [ref=e46]
+        - generic [ref=e70]
+        - generic [ref=e77]
+  - generic [ref=e96]:
+    - generic [ref=e97]:
+      - generic [ref=e98]: What you get
+      - heading "The probability course for the work you actually do." [level=2] [ref=e99]
+    - generic [ref=e100]:
+      - generic [ref=e101]:
+        - generic [ref=e102]: "01"
+        - heading "Prior, likelihood, posterior — in your hands." [level=3] [ref=e103]
+        - paragraph [ref=e104]: Every probability idea arrives as a simulator you can break. You feel the math before you formalize it.
+      - generic [ref=e105]:
+        - generic [ref=e106]: "02"
+        - heading "Drills that match your day job." [level=3] [ref=e107]
+        - paragraph [ref=e108]: Rewrite a classifier threshold. Reason about calibration. Compute a posterior update under label noise.
+      - generic [ref=e109]:
+        - generic [ref=e110]: "03"
+        - heading "Rigor you can reference later." [level=3] [ref=e111]
+        - paragraph [ref=e112]: No hand-waving. Formal definitions, worked proofs, and a cheatsheet you can paste into docs.
+  - generic [ref=e114]:
+    - generic [ref=e115]:
+      - generic [ref=e116]:
+        - generic [ref=e117]: Curriculum · preview
+        - heading "Forty lessons. One coherent arc." [level=2] [ref=e118]
+      - link "Jump to Bayes’ rule →" [ref=e119] [cursor=pointer]:
+        - /url: /bayes
+    - generic [ref=e120]:
+      - generic [ref=e121]:
+        - generic [ref=e122]
+        - list [ref=e125]
+      - generic [ref=e138]:
+        - generic [ref=e139]
+        - list [ref=e142]
+      - generic [ref=e155]:
+        - generic [ref=e156]
+        - list [ref=e159]
+  - generic [ref=e173]:
+    - generic [ref=e174]: From the early cohort
+    - blockquote [ref=e175]: “The medical-test simulator on the Bayes page did more for my intuition than three years of coursework. I sent it to my whole team.”
+    - generic [ref=e176]: ML Engineer · early-access reviewer
+  - generic [ref=e180]:
+    - generic [ref=e181]:
+      - heading "Start with Bayes. Stay for the rest." [level=2] [ref=e182]
+      - generic [ref=e183]:
+        - generic [ref=e184]
+        - generic [ref=e187]
+        - generic [ref=e190]
+    - link "Try the Bayes lesson" [ref=e193] [cursor=pointer]:
+      - /url: /bayes
+      - text: Try the Bayes lesson
+      - img [ref=e194]
+  - contentinfo [ref=e196]:
+    - generic [ref=e197]:
+      - generic [ref=e198]:
+        - img "QuantBayesics" [ref=e199]
+        - generic [ref=e211]: QuantBayesics
+        - generic [ref=e212]: · © 2026
+      - link "Open examples" [ref=e214] [cursor=pointer]:
+        - /url: "#"
+        - img [ref=e215]
+        - text: Open examples

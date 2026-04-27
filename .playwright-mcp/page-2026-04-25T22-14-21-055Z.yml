@@ -1,0 +1,140 @@
+- generic [ref=e2]:
+  - generic [ref=e4]:
+    - link "QuantBayesics" [ref=e5] [cursor=pointer]:
+      - /url: /
+      - img [ref=e6]
+      - text: QuantBayesics
+    - generic [ref=e9]: Foundations · 03 / 04
+  - generic [ref=e12]:
+    - article [ref=e13]:
+      - generic [ref=e14]:
+        - generic [ref=e15]: Lesson 03 · Bayes’ rule
+        - heading "When a 99% test still gets you wrong." [level=1] [ref=e16]
+        - paragraph [ref=e17]: A medical test has 99% sensitivity and 95% specificity. The disease affects 1% of the population. You test positive. What’s the chance you actually have the disease?
+        - paragraph [ref=e18]: Try the simulator on the right before reading on — then come back.
+      - generic [ref=e19]:
+        - generic [ref=e20]: Intuition
+        - heading "The denominator is the trick." [level=2] [ref=e21]
+        - generic [ref=e22]:
+          - paragraph [ref=e23]:
+            - text: It’s tempting to read “99% sensitivity” and conclude that a positive test means a 99% chance of disease. But sensitivity only tells you
+            - generic [ref=e26]:
+              - generic [ref=e27]: P(+ ∣
+              - generic [ref=e28]: D)
+            - text: — how the test behaves
+            - emphasis [ref=e29]: given
+            - text: the disease.
+          - paragraph [ref=e30]:
+            - text: "To go the other way, you need every source of positive tests: true positives from the 1% who are sick,"
+            - emphasis [ref=e31]: and
+            - text: false positives from the 99% who aren’t. Both groups show up in
+            - generic [ref=e35]: P(+)
+            - text: ", and because the healthy group is 99× larger, its 5% false-positive rate overwhelms the true positives."
+      - generic [ref=e36]:
+        - generic [ref=e37]: Formula
+        - heading "Bayes’ rule." [level=2] [ref=e38]
+        - generic [ref=e43]:
+          - generic [ref=e44]: P(D ∣
+          - generic [ref=e45]: +) =
+          - generic [ref=e51]:
+            - generic [ref=e52]: P(+ ∣ D) P(D) + P(+ ∣ ¬D) P(¬D)
+            - generic [ref=e54]: P(+ ∣ D) P(D)
+        - paragraph [ref=e58]:
+          - text: "Plugging in:"
+          - generic [ref=e61]:
+            - generic [ref=e62]: P(D) =
+            - generic [ref=e63]: "0.01"
+          - text: ","
+          - generic [ref=e66]:
+            - generic [ref=e67]: P(+ ∣
+            - generic [ref=e68]: D) =
+            - generic [ref=e69]: "0.99"
+          - text: ","
+          - generic [ref=e72]:
+            - generic [ref=e73]: P(+ ∣
+            - generic [ref=e74]: ¬D) =
+            - generic [ref=e75]: "0.05"
+          - text: . The numerator is
+          - generic [ref=e78]:
+            - generic [ref=e79]: 0.99 ×
+            - generic [ref=e80]: 0.01 =
+            - generic [ref=e81]: "0.0099"
+          - text: . The denominator is
+          - generic [ref=e84]:
+            - generic [ref=e85]: 0.0099 +
+            - generic [ref=e86]: 0.05 ×
+            - generic [ref=e87]: 0.99 =
+            - generic [ref=e88]: "0.0594"
+          - text: .
+        - generic [ref=e93]:
+          - generic [ref=e94]: P(D ∣
+          - generic [ref=e95]: +) =
+          - generic [ref=e96]:
+            - generic [ref=e101]:
+              - generic [ref=e102]: "0.0594"
+              - generic [ref=e104]: "0.0099"
+            - text: ≈
+          - generic [ref=e108]: 16.7%
+      - generic [ref=e109]:
+        - generic [ref=e110]: Check your read
+        - heading "Quick drill." [level=2] [ref=e111]
+        - paragraph [ref=e112]: Move the sliders around until you can answer this without peeking.
+        - generic [ref=e114]:
+          - generic [ref=e116]:
+            - text: Holding sensitivity and specificity fixed, what happens to
+            - generic [ref=e119]:
+              - generic [ref=e120]: P(D ∣
+              - generic [ref=e121]: +)
+            - text: as the prior
+            - generic [ref=e125]: P(D)
+            - text: falls toward zero?
+          - list [ref=e126]:
+            - listitem [ref=e127]:
+              - button "It stays the same — sensitivity dominates." [ref=e128]:
+                - generic [ref=e130]: It stays the same — sensitivity dominates.
+            - listitem [ref=e131]:
+              - button "It rises, because rare disease = more informative test." [ref=e132]:
+                - generic [ref=e134]: It rises, because rare disease = more informative test.
+            - listitem [ref=e135]:
+              - button "It falls toward zero, because false positives swamp the true positives." [active] [ref=e136]:
+                - generic [ref=e138]: It falls toward zero, because false positives swamp the true positives.
+            - listitem [ref=e139]:
+              - button "It flips to 1 − sensitivity." [ref=e140]:
+                - generic [ref=e142]: It flips to 1 − sensitivity.
+          - button "Check" [disabled] [ref=e144]
+      - generic [ref=e145]:
+        - generic [ref=e146]: Full solution walkthrough
+        - heading "See every step, with a second worked example." [level=2] [ref=e147]
+        - paragraph [ref=e148]: A full derivation, a second example (spam classifier), and the common traps production teams hit.
+        - generic [ref=e151]:
+          - generic [ref=e152]:
+            - img [ref=e153]
+            - generic [ref=e156]: Pro
+          - paragraph [ref=e157]: Unlock the full walkthrough and solution examples.
+          - button "Unlock Pro" [ref=e158]
+      - navigation [ref=e159]:
+        - link "← Home" [ref=e160] [cursor=pointer]:
+          - /url: /
+        - generic [ref=e161]: "Next up: Independence & chain rule"
+    - complementary [ref=e162]:
+      - generic [ref=e164]:
+        - generic [ref=e165]:
+          - generic [ref=e166]: Companion simulator
+          - generic [ref=e167]: live
+        - generic [ref=e168]:
+          - generic [ref=e169]:
+            - generic [ref=e170]:
+              - generic [ref=e171]: Posterior
+              - generic [ref=e172]: 16.7%
+            - generic [ref=e174]: P(D | +) =0.167
+          - generic [ref=e177]:
+            - generic [ref=e179]:
+              - generic [ref=e180]: Prior P(D)
+              - generic [ref=e181]: 1.00%
+            - generic [ref=e186]:
+              - generic [ref=e187]: Sensitivity P(+|D)
+              - generic [ref=e188]: 99.0%
+            - generic [ref=e193]:
+              - generic [ref=e194]: Specificity P(−|¬D)
+              - generic [ref=e195]: 95.0%
+        - paragraph [ref=e199]: Pull the prior toward 0 to feel why rare-event detection is hard. Pull specificity down even a little to watch the posterior collapse.

@@ -1,0 +1,204 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "QuantBayesics — home" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - img "QuantBayesics" [ref=e6]
+          - generic [ref=e18]: QuantBayesics
+        - generic [ref=e19]:
+          - navigation [ref=e20]:
+            - link "Premium" [ref=e21] [cursor=pointer]:
+              - /url: "#premium"
+            - link "Curriculum" [ref=e22] [cursor=pointer]:
+              - /url: "#curriculum"
+            - link "Sign In" [ref=e23] [cursor=pointer]:
+              - /url: "#"
+          - link "Get Started" [ref=e24] [cursor=pointer]:
+            - /url: /bayes
+            - text: Get Started
+            - img [ref=e25]
+    - generic [ref=e28]:
+      - generic [ref=e29]:
+        - heading "All you need to ace your interviews. Learn, don't memorize." [level=1] [ref=e30]:
+          - text: All you need to
+          - generic [ref=e31]: ace
+          - text: your interviews.
+          - text: Learn, don't memorize.
+        - paragraph [ref=e33]: QuantBayesics is a probability course for people shipping models in production. Every lesson pairs a live simulator with a drill — no passive videos, no hand-waving through the math.
+        - generic [ref=e34]:
+          - link "Try the Bayes lesson" [ref=e35] [cursor=pointer]:
+            - /url: /bayes
+            - text: Try the Bayes lesson
+            - img [ref=e36]
+          - link "Browse the curriculum" [ref=e38] [cursor=pointer]:
+            - /url: "#curriculum"
+        - paragraph [ref=e39]: Free lessons · no card required · premium drills unlock with Pro.
+      - generic [ref=e42]:
+        - generic [ref=e43]:
+          - generic [ref=e44]: Live · two dice · law of large numbers
+          - generic [ref=e45]: watch 7 emerge
+        - generic [ref=e46]:
+          - generic [ref=e47]:
+            - generic [ref=e49]:
+              - generic [ref=e51]: Current roll
+              - generic [ref=e65]:
+                - generic [ref=e66]: Sum
+                - generic [ref=e67]: "5"
+            - generic [ref=e68]:
+              - generic [ref=e69]:
+                - generic [ref=e70]: Expected value
+                - generic [ref=e71]: "7.353"
+              - generic [ref=e72]:
+                - generic [ref=e73]: Rolls logged
+                - generic [ref=e74]: "17"
+          - generic [ref=e75]:
+            - generic [ref=e76]:
+              - generic [ref=e77]:
+                - generic [ref=e78]: Histogram of sums
+                - generic [ref=e79]: The running mean should drift toward 7.000.
+              - generic [ref=e80]: target = 7
+            - application [ref=e84]:
+              - generic [ref=e92]:
+                - generic [ref=e93]:
+                  - generic [ref=e95]: "2"
+                  - generic [ref=e97]: "3"
+                  - generic [ref=e99]: "4"
+                  - generic [ref=e101]: "5"
+                  - generic [ref=e103]: "6"
+                  - generic [ref=e105]: "7"
+                  - generic [ref=e107]: "8"
+                  - generic [ref=e109]: "9"
+                  - generic [ref=e111]: "10"
+                  - generic [ref=e113]: "11"
+                  - generic [ref=e115]: "12"
+                - generic [ref=e116]:
+                  - generic [ref=e118]: "0"
+                  - generic [ref=e120]: "1"
+                  - generic [ref=e122]: "2"
+                  - generic [ref=e124]: "3"
+                  - generic [ref=e126]: "4"
+          - generic [ref=e127]:
+            - generic [ref=e128]:
+              - generic [ref=e129]:
+                - generic [ref=e130]: Roll frequency
+                - generic [ref=e131]: 1.0 rolls/s
+              - slider "Roll frequency" [ref=e136]
+            - generic [ref=e137]:
+              - button "Pause" [ref=e138]:
+                - img [ref=e139]
+                - text: Pause
+              - button "Reset" [ref=e142]:
+                - img [ref=e143]
+                - text: Reset
+    - generic [ref=e148]:
+      - generic [ref=e149]:
+        - generic [ref=e150]: What you get
+        - heading "The probability course for the work you actually do." [level=2] [ref=e151]
+      - generic [ref=e152]:
+        - generic [ref=e153]:
+          - generic [ref=e154]: "01"
+          - heading "Prior, likelihood, posterior — in your hands." [level=3] [ref=e155]
+          - paragraph [ref=e156]: Every probability idea arrives as a simulator you can break. You feel the math before you formalize it.
+        - generic [ref=e157]:
+          - generic [ref=e158]: "02"
+          - heading "Drills that match your day job." [level=3] [ref=e159]
+          - paragraph [ref=e160]: Rewrite a classifier threshold. Reason about calibration. Compute a posterior update under label noise.
+        - generic [ref=e161]:
+          - generic [ref=e162]: "03"
+          - heading "Rigor you can reference later." [level=3] [ref=e163]
+          - paragraph [ref=e164]: No hand-waving. Formal definitions, worked proofs, and a cheatsheet you can paste into docs.
+    - generic [ref=e166]:
+      - generic [ref=e167]:
+        - generic [ref=e168]:
+          - generic [ref=e169]: Curriculum · preview
+          - heading "Forty lessons. One coherent arc." [level=2] [ref=e170]
+        - link "Jump to Bayes’ rule →" [ref=e171] [cursor=pointer]:
+          - /url: /bayes
+      - generic [ref=e172]:
+        - generic [ref=e173]:
+          - generic [ref=e174]:
+            - heading "Foundations" [level=3] [ref=e175]
+            - generic [ref=e176]: 4 lessons
+          - list [ref=e177]:
+            - listitem [ref=e178]:
+              - generic [ref=e179]: Sample spaces & events
+              - generic [ref=e180]: free
+            - listitem [ref=e181]:
+              - generic [ref=e182]: Conditional probability
+              - generic [ref=e183]: free
+            - listitem [ref=e184]:
+              - generic [ref=e185]: Bayes' rule
+              - generic [ref=e186]: free
+            - listitem [ref=e187]:
+              - generic [ref=e188]: Independence & chain rule
+              - generic [ref=e189]: free
+        - generic [ref=e190]:
+          - generic [ref=e191]:
+            - heading "Random variables" [level=3] [ref=e192]
+            - generic [ref=e193]: 4 lessons
+          - list [ref=e194]:
+            - listitem [ref=e195]:
+              - generic [ref=e196]: Discrete distributions
+              - generic [ref=e197]: free
+            - listitem [ref=e198]:
+              - generic [ref=e199]: Expectation & variance
+              - generic [ref=e200]: free
+            - listitem [ref=e201]:
+              - generic [ref=e202]: Joint & marginal
+              - generic [ref=e203]: pro
+            - listitem [ref=e204]:
+              - generic [ref=e205]: Transformations
+              - generic [ref=e206]: pro
+        - generic [ref=e207]:
+          - generic [ref=e208]:
+            - heading "Inference" [level=3] [ref=e209]
+            - generic [ref=e210]: 4 lessons
+          - list [ref=e211]:
+            - listitem [ref=e212]:
+              - generic [ref=e213]: MLE & MAP
+              - generic [ref=e214]: free
+            - listitem [ref=e215]:
+              - generic [ref=e216]: Conjugate priors
+              - generic [ref=e217]: pro
+            - listitem [ref=e218]:
+              - generic [ref=e219]: Posterior sampling
+              - generic [ref=e220]: pro
+            - listitem [ref=e221]:
+              - generic [ref=e222]: Credible intervals
+              - generic [ref=e223]: pro
+    - generic [ref=e225]:
+      - generic [ref=e226]: From the early cohort
+      - blockquote [ref=e227]: “The medical-test simulator on the Bayes page did more for my intuition than three years of coursework. I sent it to my whole team.”
+      - generic [ref=e228]: ML Engineer · early-access reviewer
+    - generic [ref=e232]:
+      - generic [ref=e233]:
+        - heading "Start with Bayes. Stay for the rest." [level=2] [ref=e234]
+        - generic [ref=e235]:
+          - generic [ref=e236]:
+            - img [ref=e237]
+            - text: No card required
+          - generic [ref=e239]:
+            - img [ref=e240]
+            - text: Open the simulator in 10 seconds
+          - generic [ref=e242]:
+            - img [ref=e243]
+            - text: Cancel Pro anytime
+      - link "Try the Bayes lesson" [ref=e245] [cursor=pointer]:
+        - /url: /bayes
+        - text: Try the Bayes lesson
+        - img [ref=e246]
+    - contentinfo [ref=e248]:
+      - generic [ref=e249]:
+        - generic [ref=e250]:
+          - img "QuantBayesics" [ref=e251]
+          - generic [ref=e263]: QuantBayesics
+          - generic [ref=e264]: · © 2026
+        - link "Open examples" [ref=e266] [cursor=pointer]:
+          - /url: "#"
+          - img [ref=e267]
+          - text: Open examples
+  - button "Open Next.js Dev Tools" [ref=e276] [cursor=pointer]:
+    - img [ref=e277]
+  - alert [ref=e280]
+  - generic [ref=e281]: "0"
