@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Check, X } from "lucide-react";
 import { cn } from "@/lib/cn";
 
@@ -10,8 +10,11 @@ type Props = {
   tolerance?: number;
   unit?: string;
   placeholder?: string;
+  successNote?: React.ReactNode;
+  wrongNote?: React.ReactNode;
   explanation?: React.ReactNode;
   className?: string;
+  onCorrect?: () => void;
 };
 
 export function NumericDrill({
@@ -20,11 +23,15 @@ export function NumericDrill({
   tolerance = 0.02,
   unit = "",
   placeholder = "answer",
+  successNote = "Correct.",
+  wrongNote = "Not quite — try again.",
   explanation,
   className,
+  onCorrect,
 }: Props) {
   const [value, setValue] = useState("");
   const [state, setState] = useState<"idle" | "correct" | "wrong">("idle");
+  const firedRef = useRef(false);
 
   function check(e: React.FormEvent) {
     e.preventDefault();
@@ -35,6 +42,10 @@ export function NumericDrill({
     }
     const ok = Math.abs(parsed - answer) / Math.max(Math.abs(answer), 1e-9) <= tolerance;
     setState(ok ? "correct" : "wrong");
+    if (ok && !firedRef.current) {
+      firedRef.current = true;
+      onCorrect?.();
+    }
   }
 
   return (
@@ -61,7 +72,8 @@ export function NumericDrill({
         </div>
         <button
           type="submit"
-          className="rounded-md px-4 py-2 text-xs font-semibold uppercase tracking-wider transition bg-[color:var(--nd-cta-bg,#111)] text-[color:var(--nd-cta-fg,#fff)] hover:opacity-90"
+          disabled={state === "correct"}
+          className="rounded-md px-4 py-2 text-xs font-semibold uppercase tracking-wider transition bg-[color:var(--nd-cta-bg,#111)] text-[color:var(--nd-cta-fg,#fff)] hover:opacity-90 disabled:opacity-40"
         >
           Check
         </button>
@@ -81,11 +93,7 @@ export function NumericDrill({
           ) : (
             <X className="mt-0.5 h-3.5 w-3.5 shrink-0" aria-hidden />
           )}
-          <span>
-            {state === "correct"
-              ? "Correct. The intuition clicks once you see how P(+) is dominated by false positives."
-              : "Not quite. Remember P(+) includes both true and false positives."}
-          </span>
+          <span>{state === "correct" ? successNote : wrongNote}</span>
         </div>
       )}
       {state === "correct" && explanation && (

@@ -29,6 +29,19 @@ body {
   overflow-y: hidden;
 }
 
+/*
+  Many lesson pages mix prose and inline KaTeX. JSX trims newline-adjacent
+  whitespace, so `text\n<Tex/>\ntext` would render the math crashed into both
+  neighbors. We give the inline-block wrapper a margin close to a real space
+  on each side; even when JSX preserves a literal space, browser whitespace
+  collapse keeps the spacing visually clean.
+*/
+.inline-katex {
+  display: inline-block;
+  margin-inline: 0.18em;
+  vertical-align: baseline;
+}
+
 /* Used by sites that want an inline grid-paper feel */
 .grid-paper {
   background-image:

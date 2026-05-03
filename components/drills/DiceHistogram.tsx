@@ -69,25 +69,16 @@ export function DiceHistogram({ className }: { className?: string }) {
 
   return (
     <div className={cn("min-w-0 space-y-4", className)}>
-      <div className="grid min-w-0 grid-cols-[1.2fr_0.8fr] gap-3">
-        <div className="min-w-0 rounded-[1.35rem] border border-[color:var(--sim-rule,rgba(0,0,0,0.08))] bg-white/65 p-3.5 shadow-[inset_0_1px_0_rgba(255,255,255,0.65)]">
-          <div className="flex items-start justify-between gap-4">
-            <div className="flex items-center gap-2">
-                <DiceFace value={dice[0]} animate={animating} />
-                <DiceFace value={dice[1]} animate={animating} />
-            </div>
-            <div className="text-right">
-              <div className="text-[10px] uppercase tracking-[0.18em] opacity-60">Sum</div>
-              <div className="font-mono text-4xl font-semibold leading-none tabular-nums">
-                {lastSum}
-              </div>
-            </div>
-          </div>
+      <div className="grid min-w-0 grid-cols-[auto_1fr] items-center gap-4">
+        <div className="flex items-center gap-2">
+          <DiceFace value={dice[0]} animate={animating} />
+          <DiceFace value={dice[1]} animate={animating} />
         </div>
 
-        <div className="grid min-w-0 gap-3">
-          <StatCard label="Expected value" value={rollCount === 0 ? "—" : runningMean.toFixed(3)} />
-          <StatCard label="Rolls logged" value={rollCount.toLocaleString()} muted />
+        <div className="grid min-w-0 grid-cols-[auto_1fr_1.3fr] gap-2">
+          <StatCard label="Sum" value={rollCount === 0 ? "—" : String(lastSum)} muted />
+          <StatCard label="Mean" value={rollCount === 0 ? "—" : runningMean.toFixed(3)} />
+          <StatCard label="Rolls" value={formatRolls(rollCount)} muted />
         </div>
       </div>
 
@@ -210,11 +201,11 @@ function StatCard({
   muted?: boolean;
 }) {
   return (
-    <div className="rounded-[1.15rem] border border-[color:var(--sim-rule,rgba(0,0,0,0.08))] bg-white/65 px-4 py-2.5">
-      <div className="text-[10px] uppercase tracking-[0.18em] opacity-60">{label}</div>
+    <div className="flex h-[4.35rem] min-w-0 flex-col justify-center gap-1.5 rounded-[1.15rem] border border-[color:var(--sim-rule,rgba(0,0,0,0.08))] bg-white/65 px-3 py-2.5">
+      <div className="whitespace-nowrap text-[10px] uppercase tracking-[0.18em] opacity-60">{label}</div>
       <div
         className={cn(
-          "mt-1 font-mono text-2xl font-semibold leading-none tabular-nums",
+          "truncate font-mono text-xl font-semibold leading-none tabular-nums",
           muted ? "text-[color:var(--fg)]" : "text-[color:var(--accent)]",
         )}
       >
@@ -245,6 +236,14 @@ function DiceFace({ value, animate }: { value: number; animate: boolean }) {
       ))}
     </div>
   );
+}
+
+function formatRolls(n: number): string {
+  if (n < 100_000) return n.toLocaleString();
+  return new Intl.NumberFormat("en-US", {
+    notation: "compact",
+    maximumFractionDigits: 2,
+  }).format(n);
 }
 
 const pipPositions: Record<number, string[]> = {

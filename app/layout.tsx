@@ -27,9 +27,9 @@ const spaceGrotesk = Space_Grotesk({
 });
 
 export const metadata: Metadata = {
-  title: "QuantBayesics — probability fluency for ML engineers",
+  title: "Bayesics — probability fluency for ML engineers",
   description:
-    "You reach for Bayes every week. QuantBayesics takes you from muscle memory to real fluency, one live simulator at a time.",
+    "You reach for Bayes every week. Bayesics takes you from muscle memory to real fluency, one live simulator at a time.",
 };
 
 export default function RootLayout({

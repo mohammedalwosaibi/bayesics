@@ -12,7 +12,7 @@ export function Tex({ tex, className }: Props) {
   });
   return (
     <span
-      className={className}
+      className={className ? `inline-katex ${className}` : "inline-katex"}
       dangerouslySetInnerHTML={{ __html: html }}
     />
   );

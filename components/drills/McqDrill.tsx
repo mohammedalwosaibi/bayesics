@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useRef, useState } from "react";
 import { Check, X } from "lucide-react";
 import { cn } from "@/lib/cn";
 
@@ -16,6 +16,7 @@ type Props = {
   explanation?: React.ReactNode;
   className?: string;
   variant?: "default" | "compact" | "cards";
+  onCorrect?: () => void;
 };
 
 export function McqDrill({
@@ -25,11 +26,21 @@ export function McqDrill({
   explanation,
   className,
   variant = "default",
+  onCorrect,
 }: Props) {
   const [selected, setSelected] = useState<string | null>(null);
   const [checked, setChecked] = useState(false);
+  const firedRef = useRef(false);
 
   const isCorrect = checked && selected === correctId;
+
+  function handleCheck() {
+    setChecked(true);
+    if (selected === correctId && !firedRef.current) {
+      firedRef.current = true;
+      onCorrect?.();
+    }
+  }
 
   return (
     <div className={cn("space-y-4", className)}>
@@ -86,7 +97,7 @@ export function McqDrill({
         <button
           type="button"
           disabled={!selected || (checked && isCorrect)}
-          onClick={() => setChecked(true)}
+          onClick={handleCheck}
           className="rounded-md px-4 py-2 text-xs font-semibold uppercase tracking-wider transition bg-[color:var(--mcq-cta-bg,#111)] text-[color:var(--mcq-cta-fg,#fff)] hover:opacity-90 disabled:opacity-40"
         >
           Check
