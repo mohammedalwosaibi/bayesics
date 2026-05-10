@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Fraunces, Space_Grotesk } from "next/font/google";
+import { ClerkProvider } from "@clerk/nextjs";
+import { ProgressSync } from "@/components/ProgressSync";
 import "./globals.css";
 
 const inter = Inter({
@@ -36,6 +38,7 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
+    <ClerkProvider>
     <html
       lang="en"
       className={`${inter.variable} ${jetbrainsMono.variable} ${fraunces.variable} ${spaceGrotesk.variable} h-full antialiased`}
@@ -70,8 +73,10 @@ export default function RootLayout({
           ["--lp-cta-fg" as string]: "#ffffff",
         }}
       >
+        <ProgressSync />
         {children}
       </body>
     </html>
+    </ClerkProvider>
   );
 }

@@ -39,7 +39,7 @@ export default function CurriculumPage() {
             <div className="mt-6 flex items-center gap-3 text-[12px] font-mono uppercase tracking-[0.18em] text-[color:var(--muted)]">
               <span className="inline-flex items-center gap-1.5">
                 <Check className="h-3.5 w-3.5 text-[color:var(--accent)]" aria-hidden />
-                Tracked locally · no account
+                Sign in to save progress · daily streak
               </span>
               <span className="opacity-40">·</span>
               <span>Free</span>
