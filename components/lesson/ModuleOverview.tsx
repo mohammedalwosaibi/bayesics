@@ -25,7 +25,9 @@ export function ModuleOverview({ module: m }: { module: ModuleMeta }) {
             <div className="mt-6 font-mono text-[11px] uppercase tracking-[0.18em] text-[color:var(--accent)]">
               Module {String(m.number).padStart(2, "0")}
             </div>
-            <h1 className={`${displayClass} mt-2 text-4xl leading-tight md:text-5xl`}>
+            <h1
+              className={`${displayClass} mt-2 text-4xl leading-tight md:text-5xl`}
+            >
               {m.title}
             </h1>
             <p className="mt-3 text-[15px] leading-relaxed text-[color:var(--muted)]">
@@ -38,12 +40,12 @@ export function ModuleOverview({ module: m }: { module: ModuleMeta }) {
         </section>
 
         <section className="mx-auto max-w-4xl px-6 py-12">
-          <ol className="space-y-3">
+          <ol className="space-y-2.5">
             {m.lessons.map((l) => (
               <li key={l.id}>
                 <Link
                   href={`/curriculum/${m.slug}/${l.slug}`}
-                  className="group flex items-start gap-4 rounded-xl border border-[color:var(--rule)] bg-[color:var(--surface)] p-5 transition hover:border-[color:var(--accent)]/40 hover:bg-white"
+                  className="group flex items-start gap-4 rounded-xl border border-[color:var(--rule)] bg-[color:var(--surface)] p-5 shadow-[var(--shadow-xs)] transition hover:-translate-y-0.5 hover:border-[color:var(--accent)]/25 hover:bg-white hover:shadow-[var(--shadow-card-hover)]"
                 >
                   <LessonCheck lessonId={l.id} order={l.order} />
                   <div className="min-w-0 flex-1">
@@ -53,7 +55,7 @@ export function ModuleOverview({ module: m }: { module: ModuleMeta }) {
                     <div className={`${displayClass} mt-1 text-xl`}>
                       {l.title}
                     </div>
-                    <p className="mt-1 text-[14px] leading-relaxed text-[color:var(--muted)]">
+                    <p className="mt-1 text-[13px] leading-relaxed text-[color:var(--muted)]">
                       {l.blurb}
                     </p>
                   </div>
@@ -64,13 +66,14 @@ export function ModuleOverview({ module: m }: { module: ModuleMeta }) {
                 </Link>
               </li>
             ))}
+
             <li>
               <Link
                 href={`/curriculum/${m.slug}/unit-test`}
-                className="group flex items-start gap-4 rounded-xl border border-dashed border-[color:var(--accent)]/40 bg-[color:var(--accent-soft)] p-5 transition hover:bg-[color:var(--accent-soft)]/80"
+                className="group flex items-start gap-4 rounded-xl border border-dashed border-[color:var(--accent)]/35 bg-[color:var(--accent-soft)] p-5 transition hover:border-[color:var(--accent)]/50 hover:bg-[color:var(--accent-soft)]"
               >
                 <span
-                  className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[color:var(--accent)] text-[color:var(--accent-fg)]"
+                  className="mt-0.5 inline-flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-[color:var(--accent)] text-[color:var(--accent-fg)] shadow-[var(--shadow-accent)]"
                   aria-hidden
                 >
                   <Check className="h-3.5 w-3.5" />
@@ -82,9 +85,8 @@ export function ModuleOverview({ module: m }: { module: ModuleMeta }) {
                   <div className={`${displayClass} mt-1 text-xl`}>
                     Module {m.number} unit test
                   </div>
-                  <p className="mt-1 text-[14px] leading-relaxed text-[color:var(--muted)]">
-                    One synthesis question. Required to mark the module
-                    complete.
+                  <p className="mt-1 text-[13px] leading-relaxed text-[color:var(--muted)]">
+                    One synthesis question. Required to mark the module complete.
                   </p>
                 </div>
                 <ArrowRight

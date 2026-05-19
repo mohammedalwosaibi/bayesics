@@ -43,34 +43,25 @@ export { LogoMark };
 
 export function SiteHeader() {
   return (
-    <header className="sticky top-0 z-10 border-b border-[color:var(--rule)] bg-[color:var(--bg)]/85 backdrop-blur">
-      <div className="mx-auto flex h-[72px] max-w-6xl items-center justify-between px-6">
+    <header className="sticky top-0 z-10 border-b border-[color:var(--rule)] bg-[color:var(--bg)]/90 backdrop-blur-md">
+      <div className="mx-auto flex h-[68px] max-w-6xl items-center justify-between px-6">
         <Link
           href="/"
           aria-label="Bayesics — home"
-          className="flex items-center gap-2"
+          className="flex items-center gap-2.5 transition-opacity hover:opacity-80"
         >
-          <LogoMark className="h-12 w-12" />
-          <Wordmark className="relative -top-[1px] text-[28px]" />
+          <LogoMark className="h-11 w-11" />
+          <Wordmark className="relative -top-[1px] text-[27px]" />
         </Link>
+
         <div className="hidden items-center gap-8 sm:flex">
-          <nav className="flex items-center gap-8 text-[14px] text-[color:var(--muted)]">
+          <nav className="flex items-center gap-7 text-[14px] text-[color:var(--muted)]">
             <Link
               href="/curriculum"
-              className="transition hover:text-[color:var(--fg)]"
+              className="relative py-0.5 transition hover:text-[color:var(--fg)] after:absolute after:-bottom-0.5 after:left-0 after:h-px after:w-0 after:bg-[color:var(--accent)] after:transition-[width] after:duration-200 hover:after:w-full"
             >
               Curriculum
             </Link>
-            <span
-              aria-disabled="true"
-              className="inline-flex cursor-default items-center gap-1.5"
-              title="Premium tier coming soon"
-            >
-              Premium
-              <span className="rounded-full border border-[color:var(--rule)] px-1.5 py-[1px] font-mono text-[9px] uppercase tracking-[0.16em]">
-                soon
-              </span>
-            </span>
           </nav>
           <AuthControls />
         </div>

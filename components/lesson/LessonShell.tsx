@@ -25,7 +25,9 @@ type Props = {
 };
 
 export function LessonShell({ module, lesson, isUnitTest, children }: Props) {
-  const orderLabel = isUnitTest ? "Unit test" : `Lesson ${String(lesson?.order ?? 0).padStart(2, "0")}`;
+  const orderLabel = isUnitTest
+    ? "Unit test"
+    : `Lesson ${String(lesson?.order ?? 0).padStart(2, "0")}`;
   const title = isUnitTest
     ? `${module.title} · Unit test`
     : (lesson?.title ?? "");
@@ -41,8 +43,9 @@ export function LessonShell({ module, lesson, isUnitTest, children }: Props) {
 
   return (
     <div className="flex min-h-screen flex-col">
+      {/* Lesson top bar */}
       <div className="border-b border-[color:var(--rule)] bg-[color:var(--bg)]">
-        <div className="mx-auto flex h-14 max-w-6xl items-center justify-between gap-4 px-6">
+        <div className="mx-auto flex h-13 max-w-6xl items-center justify-between gap-4 px-6">
           <Link
             href="/curriculum"
             className="inline-flex items-center gap-1.5 text-[12px] text-[color:var(--muted)] transition hover:text-[color:var(--fg)]"
@@ -68,7 +71,7 @@ export function LessonShell({ module, lesson, isUnitTest, children }: Props) {
             {eyebrow}
           </div>
           <h1
-            className={`${displayClass} mt-3 text-3xl leading-tight md:text-4xl`}
+            className={`${displayClass} mt-3 text-3xl leading-tight md:text-[2.6rem]`}
           >
             {title}
           </h1>
@@ -120,9 +123,9 @@ export function LessonShell({ module, lesson, isUnitTest, children }: Props) {
           {nav.prev ? (
             <Link
               href={stepHref(nav.prev)}
-              className="inline-flex items-center gap-2 text-[color:var(--muted)] hover:text-[color:var(--fg)]"
+              className="group inline-flex items-center gap-2 text-[color:var(--muted)] transition hover:text-[color:var(--fg)]"
             >
-              <ArrowLeft className="h-3.5 w-3.5" aria-hidden />
+              <ArrowLeft className="h-3.5 w-3.5 transition group-hover:-translate-x-0.5" aria-hidden />
               <span className="hidden sm:inline">Previous:</span>
               <span className="font-medium text-[color:var(--fg)]">
                 {stepLabel(nav.prev)}
@@ -134,21 +137,21 @@ export function LessonShell({ module, lesson, isUnitTest, children }: Props) {
           {nav.next ? (
             <Link
               href={stepHref(nav.next)}
-              className="inline-flex items-center gap-2 text-[color:var(--muted)] hover:text-[color:var(--fg)]"
+              className="group inline-flex items-center gap-2 text-[color:var(--muted)] transition hover:text-[color:var(--fg)]"
             >
               <span className="hidden sm:inline">Next up:</span>
               <span className="font-medium text-[color:var(--fg)]">
                 {stepLabel(nav.next)}
               </span>
-              <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+              <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" aria-hidden />
             </Link>
           ) : (
             <Link
               href="/curriculum"
-              className="inline-flex items-center gap-2 text-[color:var(--muted)] hover:text-[color:var(--fg)]"
+              className="group inline-flex items-center gap-2 text-[color:var(--muted)] transition hover:text-[color:var(--fg)]"
             >
               Back to curriculum
-              <ArrowRight className="h-3.5 w-3.5" aria-hidden />
+              <ArrowRight className="h-3.5 w-3.5 transition group-hover:translate-x-0.5" aria-hidden />
             </Link>
           )}
         </nav>

@@ -36,9 +36,12 @@ export default function CurriculumPage() {
               complete; finish all the lessons <em>and</em> the unit test to
               tick a module.
             </p>
-            <div className="mt-6 flex items-center gap-3 text-[12px] font-mono uppercase tracking-[0.18em] text-[color:var(--muted)]">
+            <div className="mt-5 flex flex-wrap items-center gap-4 text-[12px] font-mono uppercase tracking-[0.16em] text-[color:var(--muted)]">
               <span className="inline-flex items-center gap-1.5">
-                <Check className="h-3.5 w-3.5 text-[color:var(--accent)]" aria-hidden />
+                <Check
+                  className="h-3.5 w-3.5 text-[color:var(--accent)]"
+                  aria-hidden
+                />
                 Sign in to save progress · daily streak
               </span>
               <span className="opacity-40">·</span>
@@ -48,16 +51,16 @@ export default function CurriculumPage() {
         </section>
 
         <section className="mx-auto max-w-6xl px-6 py-16">
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             {curriculum.map((m) => (
               <ModuleCard key={m.id} module={m} />
             ))}
           </div>
 
-          <div className="mt-12 border-t border-[color:var(--rule)] pt-8 text-center">
+          <div className="mt-14 border-t border-[color:var(--rule)] pt-8 text-center">
             <Link
               href="/curriculum/foundations/sample-spaces"
-              className="inline-flex items-center gap-2 rounded-full bg-[color:var(--accent)] px-5 py-2.5 text-sm font-semibold text-[color:var(--accent-fg)] shadow-[0_14px_30px_-18px_rgba(79,70,229,0.95)] ring-1 ring-white/20 transition hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-full bg-[color:var(--accent)] px-5 py-2.5 text-sm font-semibold text-[color:var(--accent-fg)] shadow-[var(--shadow-accent)] ring-1 ring-white/20 transition hover:-translate-y-0.5 hover:shadow-[var(--shadow-accent-hover)]"
             >
               Start with lesson one
               <ArrowRight className="h-4 w-4" aria-hidden />
